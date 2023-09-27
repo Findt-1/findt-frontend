@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Achados e Perdidos</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./functions.js"></script>
+</head>
+<body>
+    <h1>Achados e Perdidos</h1>
+    <h2>Adicione ou procure o item perdido</h2>
+    <input type="text" id="item" placeholder="Enter item">
+    <button onclick="addItem()">Add Item</button>
+    <br><br>
+    <input type="text" id="searchItem" placeholder="Search by name">
+    <button onclick="searchItem()">Search</button>
+    <br><br>
+    <ul id="itemList"></ul>
+    <button onclick="showAllItems()">Show items</button>
+</body>
+</html>
