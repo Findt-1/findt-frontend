@@ -3,19 +3,30 @@
 <head>
     <title>Achados e Perdidos</title>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/reset.css">
     <script src="./functions.js"></script>
 </head>
 <body>
-    <h1>Achados e Perdidos</h1>
-    <h2>Adicione ou procure o item perdido</h2>
-    <input type="text" id="item" placeholder="Enter item">
-    <button onclick="addItem()">Add Item</button>
-    <br><br>
-    <input type="text" id="searchItem" placeholder="Search by name">
-    <button onclick="searchItem()">Search</button>
-    <br><br>
-    <ul id="itemList"></ul>
-    <button onclick="showAllItems()">Show items</button>
+    <header>
+        <h1 class="title">Achados e Perdidos</h1>
+        <h2 class="subtitle">Adicione ou procure o item perdido</h2>
+    </header>
+    <main class="findt__main">
+        <div class="main__search">
+            <div class="search__add">
+                <input class="findt-input" type="text" id="item" placeholder="Enter item">
+                <button class="findt-btn" onclick="addItem()">Add Item</button>
+            </div>
+            <div class="search__input">
+                <input class="findt-input" type="text" id="searchItem" placeholder="Search by name">
+                <button class="findt-btn" onclick="searchItem()">Search</button>
+            </div>
+        </div>
+        <div class="main__show">
+            <ul id="itemList"></ul>
+            <button class="findt-btn" onclick="showAllItems()">Show items</button>
+        </div>
+    </main>
 </body>
 </html>

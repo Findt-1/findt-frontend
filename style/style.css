@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.findt__main {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.findt__main .main__search {
+  display: flex;
+  align-items: center;
+}
+
+.search__add {
+  margin-right: 16px;
+}
+
+.findt__main .main__show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.findt__main .main__show #itemList{
+  list-style-type: disc;
+  margin-bottom: 16px;
+}
+
+.findt-btn {
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.findt-input {
+  border-radius: 8px;
+  border: .5px solid #ccc;
+  padding: 8px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 400;
+}
