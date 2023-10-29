@@ -1,3 +1,10 @@
+const expectedEmail = "findtinteracao2@test.com";
+const expectedPassword = "admin";
+const email = document.getElementById('email').value;
+const senha = document.getElementById('senha').value;
+
+let isLoggedIn = false;
+
 function addItem() {
   const newItem = document.getElementById("item").value.trim();
   if (newItem === "") {
@@ -53,3 +60,39 @@ function showAllItems() {
 }
 
 displayItems();
+
+function validateForm() {
+
+
+  if (!isValidEmail(email)) {
+      alert('Please enter a valid email address.');
+      return false;
+  }
+
+  alert('Login successful!');
+
+  return false;
+}
+
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function login() {
+  if (email === expectedEmail && senha === expectedPassword) {
+      isLoggedIn = true;
+      alert("Login successful!");
+  } else {
+      alert("Login failed. Please check your credentials.");
+      isLoggedIn = false;
+  }
+}
+
+function accessProtectedRoute() {
+  if (isLoggedIn) {
+      alert("You have access to the protected route.");
+  } else {
+      alert("You do not have access to the protected route. Please login first.");
+  }
+}

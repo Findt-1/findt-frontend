@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Findt!</title>
+
+  <link rel="stylesheet" href="../style/style.css">
+  <script src="../functions.js"></script>
 </head>
 <body>
   <h1>FINDT!</h1>
 
   <h2>Login</h2>
 
-  <form action="">
+  <form action="" class="find-form">
     <label for="email">
       Email
       <input type="text" id="email">
@@ -21,7 +24,7 @@
       <input type="password" id="password">
     </label>
 
-    <button>
+    <button class="find-btn" onclick="login()">
       Entrar
     </button>
   </form>
