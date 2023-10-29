@@ -1,9 +1,12 @@
+const { is } = require("jsdom/lib/jsdom/living/generated/Element");
+
 const expectedEmail = "findtinteracao2@test.com";
 const expectedPassword = "admin";
 const email = document.getElementById('email').value;
 const senha = document.getElementById('senha').value;
 
-let isLoggedIn = false;
+localStorage.setItem(isLoggedIn, false);
+let isLoggedIn = localStorage.getItem(isLoggedIn);
 
 function addItem() {
   const newItem = document.getElementById("item").value.trim();
@@ -81,11 +84,11 @@ function isValidEmail(email) {
 
 function login() {
   if (email === expectedEmail && senha === expectedPassword) {
-      isLoggedIn = true;
+      localStorage.setItem(isLoggedIn, true);
       alert("Login successful!");
-  } else {
+    } else {
       alert("Login failed. Please check your credentials.");
-      isLoggedIn = false;
+      localStorage.setItem(isLoggedIn, false);
   }
 }
 
@@ -96,3 +99,5 @@ function accessProtectedRoute() {
       alert("You do not have access to the protected route. Please login first.");
   }
 }
+
+accessProtectedRoute() 

@@ -12,9 +12,12 @@ Desenvolvimento de Sistemas, ofertado pela Universidade Presbiteriana Mackenzie.
 
 -----
 
-Versão: v0.0.2-alpha
+Versão: v2
 
-Para essa versão foi feito somente as funcionalidades mais básicas em busca de especificidade para o usuário final.
+-----
 
+Para rodar no seu computador pessoal:
+- git clone
+- rode um npm install
 
-![v0.0.2](image-1.png)
+O 
