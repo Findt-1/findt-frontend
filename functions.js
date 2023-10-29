@@ -86,6 +86,7 @@ function login() {
   if (email === expectedEmail && senha === expectedPassword) {
       localStorage.setItem(isLoggedIn, true);
       alert("Login successful!");
+      window.location.href = "/";
     } else {
       alert("Login failed. Please check your credentials.");
       localStorage.setItem(isLoggedIn, false);
@@ -97,6 +98,7 @@ function accessProtectedRoute() {
       alert("You have access to the protected route.");
   } else {
       alert("You do not have access to the protected route. Please login first.");
+      window.location.href = "/pages/login.html";
   }
 }
 
