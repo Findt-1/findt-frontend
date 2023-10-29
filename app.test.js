@@ -25,7 +25,7 @@ test('Adding an item', () => {
   expect(itemList.innerHTML).toContain('Test Item');
 });
 
-test('Searching for an item', () => {
+test('Buscar objeto', () => {
   const searchInput = document.getElementById('searchItem');
   const searchButton = document.querySelector('.search__input button');
   const itemList = document.getElementById('itemList');
