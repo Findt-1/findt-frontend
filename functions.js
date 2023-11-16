@@ -1,12 +1,8 @@
-const { is } = require("jsdom/lib/jsdom/living/generated/Element");
-
 const expectedEmail = "findtinteracao2@test.com";
 const expectedPassword = "admin";
-const email = document.getElementById('email').value;
-const senha = document.getElementById('senha').value;
 
-localStorage.setItem(isLoggedIn, false);
-let isLoggedIn = localStorage.getItem(isLoggedIn);
+// localStorage.setItem('isLoggedIn', false);
+let isLoggedIn = localStorage.getItem('isLoggedIn');
 
 function addItem() {
   const newItem = document.getElementById("item").value.trim();
@@ -24,11 +20,12 @@ function addItem() {
 }
 
 function displayItems() {
+  const items = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : [];
   const itemList = document.getElementById("itemList");
   itemList.innerHTML = "";
 
-  const items = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : [];
-
+  if(items.length === 0) return;
+  
   items.forEach(function (item) {
       const li = document.createElement("li");
       li.textContent = item;
@@ -62,8 +59,6 @@ function showAllItems() {
   displayItems();
 }
 
-displayItems();
-
 function validateForm() {
 
 
@@ -83,23 +78,31 @@ function isValidEmail(email) {
 }
 
 function login() {
+  const email = document.getElementById('email').value;
+  const senha = document.getElementById('password').value;
+
   if (email === expectedEmail && senha === expectedPassword) {
-      localStorage.setItem(isLoggedIn, true);
-      alert("Login successful!");
+      localStorage.setItem('isLoggedIn', true);
       window.location.href = "/";
+      alert("Login successful!");
     } else {
       alert("Login failed. Please check your credentials.");
-      localStorage.setItem(isLoggedIn, false);
+      localStorage.setItem('isLoggedIn', false);
   }
 }
 
 function accessProtectedRoute() {
+  const itemList = document.getElementById("itemList");
   if (isLoggedIn) {
-      alert("You have access to the protected route.");
+    if(localStorage.getItem("items") && itemList.innerHTML === "") {
+      displayItems();
+    } 
   } else {
-      alert("You do not have access to the protected route. Please login first.");
-      window.location.href = "/pages/login.html";
+    alert("You do not have access to the protected route. Please login first.");
+    window.location.href = "/pages/login.html";
   }
 }
 
-accessProtectedRoute() 
+// if(window.location.pathname !== "/pages/login.html" && window.location.pathname !== "/pages/register.html" && isLoggedIn) {
+//   accessProtectedRoute()
+// }

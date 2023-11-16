@@ -17,6 +17,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 16px;
   margin-top: 16px;
+  /*! height: 500px; */
 }
 
 .findt__main .main__search {
@@ -54,14 +55,14 @@ body {
 }
 
 .title {
-  font-size: 28px;
+  font-size: 68px;
   font-weight: 700;
   margin-bottom: 8px;
   text-align: center;
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 28px;
   font-weight: 400;
 }
 
@@ -76,4 +77,23 @@ body {
   background: #4e4eea;
   border: none;
   padding: 8px 16px;
+}
+
+.find-form .find-btn {
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.find__label {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.findt-logout {
+  border-radius: 12px;
+  background: #4e4eea;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 50px;
 }

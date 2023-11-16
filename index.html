@@ -5,7 +5,6 @@
 
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/reset.css">
-    <script src="./functions.js"></script>
 </head>
 <body>
     <header>
@@ -16,17 +15,21 @@
         <div class="main__search">
             <div class="search__add">
                 <input class="findt-input" type="text" id="item" placeholder="Enter item">
-                <button class="findt-btn" onclick="addItem()">Add Item</button>
+                <button class="findt-btn findt__add" onclick="addItem()">Add Item</button>
             </div>
             <div class="search__input">
                 <input class="findt-input" type="text" id="searchItem" placeholder="Search by name">
-                <button class="findt-btn" onclick="searchItem()">Search</button>
+                <button class="findt-btn findt__show" onclick="searchItem()">Search</button>
             </div>
         </div>
         <div class="main__show">
             <ul id="itemList"></ul>
-            <button class="findt-btn" onclick="showAllItems()">Show items</button>
+            <button class="findt-btn findt__show-all" onclick="showAllItems()">Show items</button>
         </div>
     </main>
+
+    <div class="findt-logout">Logout</div>
+
+    <script src="./functions.js"></script>
 </body>
 </html>

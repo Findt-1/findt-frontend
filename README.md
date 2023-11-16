@@ -19,5 +19,7 @@ Versão: v2
 Para rodar no seu computador pessoal:
 - git clone
 - rode um npm install
+- rode npx http-server
+- Entre em http://localhost:8080
 
 O site esta disponivel em: https://findt-1.github.io/findt-frontend/pages/login.html
